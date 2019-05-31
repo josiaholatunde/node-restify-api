@@ -3,6 +3,7 @@ const errors = require('restify-errors');
 
 module.exports = server => {
     server.get('/api/customers', async (req, res, next) => {
+        console.log('Yo I ran');
         try {
             const customers = await Customer.find({});
             res.send(customers);
